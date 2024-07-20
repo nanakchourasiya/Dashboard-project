@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('static/wine2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(221, 220, 212, 0.6); 
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .container:hover {
+            background-color: rgba(221, 220, 212, 0.7); 
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            color: #6a1a06;
+            /* text-shadow: 0 0 5px #FF5733, 0 0 5px #FFC300; */
+            font-size: 37px;
+            font-weight: 600;
+        }
+
+        /* p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        } */
+
+        .prediction-result {
+            font-size: 30px;
+            font-weight: bold;
+            color: #2f3c8e;
+            margin-top: 31px;
+            
+        }
+        .container:hover .prediction-result {
+           font-size: 33px;
+        }
+        .container:hover .sub-container {
+           font-size: 30px;
+        }
+        .sub-container {
+            font-size: 28px;
+            margin-top: -8px;
+            margin-bottom: 30px;
+            color: #2f3c8e;
+             font-weight: 600;
+        }      
+
+        .instruction {
+            /* smargin: 16px 25px; */
+             background-color: rgb(244, 235, 215, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            /* Added transition for smooth hover effect */
+        }
+
+        .instruction:hover {
+            background-color: rgb(244, 235, 215, 0.7);
+        }
+
+        /* .instruction h2 {
+            color: #dc3535;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }    */
+
+        .instruction p {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        h3 {
+           font-size: 1.6rem;
+           color: #740101;
+           margin-top: 25px;
+        }
+
+        li {
+          font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Wine Quality Prediction</h1>
+        <p class="prediction-result">Wine Quality Score: {{ prediction }}</p>
+        <p class="sub-container">
+            {% if prediction >= 3 and prediction <= 5 %}
+            Quality of Wine is not Good
+            {% elif prediction >= 6 and prediction <= 7 %}
+            Quality of Wine is considered Satisfactory
+            {% elif prediction >= 8 and prediction <= 9 %}
+            Quality of Wine is Excellent
+            {% endif %}
+        </p>
+
+        <!-- Instruction based on wine quality level -->
+        <div class="instruction">
+            <h3>Safety Measures:</h3>
+            <ul>
+                <li>Store wine bottles in a cool, dark place away from direct sunlight and heat sources.</li>
+                <li>Avoid storing wine bottles upright for extended periods to prevent the cork from drying out.</li>
+                <li>Handle wine bottles with care to avoid agitation and sediment disturbance.</li>
+                <li>Consider decanting and aerating wine before serving to enhance its flavors.</li>
+            </ul>
+
+            <h3>Potential Health Risks of Poor Wine Quality:</h3>
+            <ul>
+                <li>Alcohol-related health issues such as liver damage, addiction, and impaired judgment.</li>
+                <li>Sulfite sensitivity or allergy reactions including headaches, nausea, and breathing difficulties.</li>
+                <li>Increased risk of heart disease and certain types of cancer with excessive or prolonged wine consumption.</li>
+                <li>Adverse effects on mental health, including depression and anxiety disorders.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

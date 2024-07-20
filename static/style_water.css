@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    
+    background-size: cover;
+    background-position: center;
+    /* background-image: url(https://images.unsplash.com/photo-1512138664757-360e0aad5132?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    background:linear-gradient(to left, royalblue, white);
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* margin: auto; */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 100;
+    font-weight: 501;
+}
+
+p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid #c1bebe;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.form-wrapper:hover {
+    border-color: rgb(133, 136, 136);
+}
+
+.form-column {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* .form-column:hover label {
+    color: #007bff;
+} */
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    width: 30%;
+    padding: 12px;
+    margin-left: 5%;
+    border-radius: 100%;
+    background-color:  #557fda;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 100;
+}
+
+button:hover {
+    background-color: rgb(62, 92, 183)
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#sulfate{
+    margin-top: 0%;
+    margin-left: 55%;
+}
+#garlick{
+    margin-left: 99%;
+    margin-top: 10%;
+}
